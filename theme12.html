@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<!--
+ |
+ |  Theme #12 by raiidens (@ tumblr)
+ |  Published February 2016
+ |  Updated June 2019
+ |  Ver. 1.02
+ |
+ |  Edit as much as you like, but please do not
+ |  claim as your own work, and leave credit somewhere.
+ |
+ -->
+
+<html>
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<!-- Please do not edit these tags! -->
+<meta name="if:250px posts" content="0">
+<meta name="if:Show captions" content="1">
+<meta name="if:Always show tags" content="0">
+<meta name="if:Black and white images" content="0">
+<meta name="if:Color images on hover" content="0">
+
+<meta name="image:Character image" content="https://static.tumblr.com/o4povtk/IDsnwf7bt/papyrus.png">
+<meta name="image:Background image" content="">
+
+<meta name="color:Background" content="#000000">
+<meta name="color:Scrollbar" content="#FFFFFF">
+<meta name="color:Scrollbar border" content="#FFFFFF">
+<meta name="color:Scrollbar background" content="#000000">
+<meta name="color:Tooltip text" content="#FFFFFF">
+<meta name="color:Tooltip border" content="#000000">
+<meta name="color:Tooltip background" content="#000000">
+<meta name="color:Text highlight background" content="#FFFFFF">
+<meta name="color:Text highlight" content="#000000">
+ 
+<meta name="color:Container background" content="#000000">
+<meta name="color:Container border" content="#FFFFFF">
+
+<meta name="color:Text" content="#FFFFFF">
+<meta name="color:Bold text" content="#FFFFFF">
+<meta name="color:Italic text" content="#FFFFFF">
+<meta name="color:Title text" content="#FFFFFF">
+<meta name="color:Title link" content="#FFFFFF">
+<meta name="color:Title link hover" content="#FFFFFF">
+<meta name="color:Blockquote" content="#FFFFFF">
+<meta name="color:Post background" content="#000000">
+<meta name="color:Post border" content="#FFFFFF">
+<meta name="color:Body link" content="#F68228">
+<meta name="color:Body link hover" content="#FFFFFF">
+<meta name="color:Post info" content="#FFFFFF">
+<meta name="color:Post info tags" content="#FFFFFF">
+<meta name="color:Post info tags hover" content="#F68228">
+
+<meta name="color:Pagination" content="#FFFFFF">
+<meta name="color:Pagination hover" content="#F68228">
+
+<meta name="color:FAQ header text" content="#FFFFFF">
+<meta name="color:FAQ header border" content="#FFFFFF">
+<meta name="color:FAQ header background" content="#000000">
+<meta name="color:Links header text" content="#FFFFFF">
+<meta name="color:Links header border" content="#FFFFFF">
+<meta name="color:Links header background" content="#000000">
+<meta name="color:Links tab link" content="#FFFFFF">
+<meta name="color:Links tab link hover" content="#FFFFFF">
+
+<meta name="text:Your name" content="Frisk">
+<meta name="text:LV" content="1">
+<meta name="text:HP" content="20">
+
+<meta name="font:Body font" content="Verdana, Geneva, sans-serif">
+<meta name="font:Title font" content="'8bitoperator', 'Press Start 2P'">
+
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P|VT323' rel='stylesheet' type='text/css'>
+
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ 
+<style type="text/css">
+@font-face {
+    font-family: "8bitoperator";
+    src: url("https://static.tumblr.com/o4povtk/wojnwfrxb/8bitoperator.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Mars Needs Cunnilingus";
+    src: url("https://dl.dropboxusercontent.com/s/1gkwsqyfhycd0vj/MarsNeedsCunnilingus.ttf?dl=0") format("truetype");
+}
+
+.tooltiptheme {
+    border-radius:5px;
+    padding:8px;
+    background:{color:Tooltip background};
+    border:{color:Tooltip border};
+    color:{color:Tooltip text};
+    font-family:"Mars Needs Cunnilingus", 'VT323';
+    font-size:8pt;
+    line-height:16px;
+}
+
+::-webkit-scrollbar {
+    width:6px;
+    height:4px;
+    background:{color:Scrollbar background};
+}
+::-webkit-scrollbar-thumb {
+    background-color:{color:Scrollbar};
+    border: 1px double {color:Scrollbar border};
+}
+
+.tmblr-iframe {
+    top:3px !important;
+    right:3px !important;
+    position:fixed !important;
+    opacity: 0.4;
+	z-index: 999999 !important;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.tmblr-iframe:hover {opacity: 1.0;}
+*::selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+*::-moz-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+*::-webkit-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+
+html, body, p, h1, h2, h3, h4, h5, h6, blockquote {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+p {margin:10px; margin-bottom:10px;}
+body {
+    background-color:{color:Background};
+    color:{color:Text};
+    font-family:{font:Body font};
+	background-image:url('{image:Background image}');
+    background-attachment:fixed;
+    overflow-y:auto;
+}
+
+h3 {
+    font-family:{font:Title font};
+    font-size:15px;
+    font-weight:normal;
+}
+
+a {
+    text-decoration:none;
+    color:{color:Body link};
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+a:hover {color:Body link hover};}
+
+small {font-size:8px;}
+big {font-size:12px;}
+ 
+ul {text-align:justify;}
+ul, ol {margin-left:-25px;}
+ 
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+ 
+blockquote {
+    padding: 3px 0 3px 13px;
+    border-left: 7px solid {color:Blockquote};
+    text-align:justify;
+}
+blockquote p {display:block!important;}
+blockquote img {
+    display:block;
+    max-width:350px;
+    {block:If250pxPosts}max-width:200px;{/block:If250pxPosts}
+    width:auto;
+    height:auto;
+}
+ 
+.post {
+    clear:both;
+    background-color:{color:Post background};
+    border:solid 3px {color:Post border};
+    color:{color:Text};
+    width: 400px;
+    {block:If250pxPosts}width: 250px;{/block:If250pxPosts}
+    height: 100%;
+    margin-top:10px;
+    padding:10px 10px 10px 10px;
+    font-family:{font:Body font};
+    font-size:13px;
+}
+.post b {color:{color:Bold text};}
+.post i {color:{color:Italic text};}
+.post table {font-size:10px;}
+.post h3 {
+    margin-top:10px;
+    font-size:20px;
+    overflow:visible;
+    color:{color:Title text};
+    font-family:{font:Title font};
+    font-weight:normal;
+}
+ 
+.caption blockquote {padding-left: 20px;}
+ 
+.post text {text-align: left;}
+ 
+.post photo {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.post photo img {border: 0;}
+ 
+.post quote {text-align: left;}
+.post quote .source {font-size: 10em;}
+ 
+.post ask {text-align: left;}
+ 
+.answer {
+    width:360px;
+    {block:If250pxPosts}width:210px;{/block:If250pxPosts}
+    text-align: left;
+    line-height: 15px;
+    padding: 10px 10px 10px 10px;
+}
+.question {
+    max-width:265px;
+    {block:If250pxPosts}width:200px;{/block:If250pxPosts}
+    margin-bottom: 0px;
+    line-height: 25px;
+}
+ 
+.ask {width:380px; {block:If250pxPosts}width:230px;{/block:If250pxPosts}}
+ 
+.askerportrait {
+    margin:10px;
+    position: absolute;
+}
+ 
+.a {
+    margin-left: 80px;
+    min-height: 64px;
+    padding: 10px;
+}
+ 
+.asker {text-transform: uppercase;}
+ 
+.post link {text-align: left;}
+.post audio {text-align: left;}
+.post video {text-align: left;}
+.post chat {text-align: left;}
+.post chat li {list-style-type: none;}
+
+.tags a {
+    color:{color:Post info tags};
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+.tags a:hover {color:{color:Post info tags hover};}
+
+ol.notes {
+    display:block;
+    text-align:left;
+    margin-bottom:30px;
+}
+ol.notes li.note{
+    padding:1%;
+    list-style-type:none;
+}
+ 
+.pagenotes {
+    margin-top:10px;
+    text-align:left;
+    background-color:{color:Post background};
+    border:solid 3px {color:Post border};
+    font-size:10px;
+    padding:20px 20px 20px 20px;
+    width:380px;
+    {block:If250pxPosts}width:230px;{/block:If250pxPosts}
+}
+ 
+.caption{
+    padding-top:13px;
+    padding-left:10px;
+    padding-bottom:5px;
+    margin-top:5px;
+    text-align:left;
+    font-size:10px;
+    font-style:italic;
+    padding-right:10px;
+}      
+ 
+.permapage {
+    letter-spacing:1px;
+    font-size:10px;
+    margin-top:5px;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:10px 10px 0 10px;
+    width:400px;
+    {/block:If250pxPosts}width:250px;{/block:If250pxPosts}
+}
+ 
+.postsource {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    width:400px;
+    {/block:If250pxPosts}width:250px;{/block:If250pxPosts}
+}
+.postsource a {
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+ 
+.posttitle {
+    color:{color:Title text};
+    text-align:left;
+    font-family:{font:Title font};
+}
+.posttitle a {
+    color:{color:Title link};
+    text-decoration:none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.posttitle a:hover {color:{color:Title link hover};}
+ 
+{block:IfBlackAndWhiteImages}
+.post img, .html_photoset {
+    filter:grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+{block:IfColorImagesOnHover}
+.post img:hover, .html_photoset:hover {
+    filter:grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+{/block:IfColorImagesOnHover}
+{/block:IfBlackAndWhiteImages}
+
+#credit {
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    padding:8px;
+    border-radius:3px;
+    background-color:#111111;
+    color:#555555;
+    font-family:'VT323';
+    font-size:14px;
+    z-index:99999;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+#credit:hover {
+    background-color:#CCCCCC;
+    color:black;
+}
+
+#characterimage {
+    position:fixed;
+    top:50%;
+    left:50%;
+    height:200px;
+    width:500px;
+    margin-top:-305px;
+    margin-left:-250px;
+    background-image:url('{image:Character image}');
+    background-position:bottom center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#maincont {
+    position:fixed;
+    top:50%;
+    left:50%;
+    height:300px;
+    width:500px;
+    margin-top:-100px;
+    margin-left:-250px;
+    background-color:{color:Container background};
+    border:solid 5px {color:Text};
+    overflow:hidden;
+}
+
+#gameinfo {
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:210px;
+    margin-left:-200px;
+    color:#FFFFFF;
+    font-family:"Mars Needs Cunnilingus", 'VT323';
+    font-size:16px;
+    text-transform:uppercase;
+}
+#gameinfo img {vertical-align:middle;}
+
+#postcont {
+    position:absolute;
+    left:0px;
+    height:260px;
+    width:460px;
+    background-color:{color:Container background};
+    padding:10px 20px 30px 20px;
+    {block:If250pxPosts}width:385px; padding-left:95px;{/block:If250pxPosts}
+    overflow-y:auto;
+}
+#postcont > ol {list-style-type:none;}
+
+.pagindex, .pagprev, .pagnext {
+    position:absolute;
+    left:50%;
+    color:{color:Pagination};
+    font-family:"Mars Needs Cunnilingus", 'VT323';
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.pagindex:hover, .pagprev:hover, .pagnext:hover {color:{color:Pagination hover};}
+.pagindex {margin-left:-24px;}
+.pagprev {margin-left:-45px;}
+.pagnext {margin-left:38px;}
+
+#aboutcont {
+    position:absolute;
+    left:500px;
+    height:260px;
+    width:460px;
+    font-size:12px;
+    background-color:{color:Container background};
+    padding:20px 20px 20px 20px;
+    overflow-y:auto;
+}
+#msgcont {
+    position:absolute;
+    left:1000px;
+    height:260px;
+    width:450px;
+    background-color:{color:Container background};
+    overflow-y:auto;
+    padding:20px 25px 20px 25px;
+}
+#faqheader {
+    width:445px;
+    background-color:{color:FAQ header background};
+    color:{color:FAQ header text};
+    border:solid 1px {color:FAQ header border};
+    padding:10px 0px 10px 0px;
+    font-family:{font:Title font};
+    font-size:12px;
+    text-transform:uppercase;
+    text-align:center;
+}
+#faqanswer {
+    width:405px;
+    padding:10px 30px 20px 30px;
+    font-size:12px;
+}
+
+#linklistcont {
+    position:absolute;
+    left:1500px;
+    background-color:{color:Container background};
+    font-size:12px;
+    height:280px;
+    width:270px;
+    padding:10px 115px 10px 115px;
+    overflow-y:auto;
+}
+#linklistheader {
+    clear:both;
+    width:250px;
+    background-color:{color:Links header background};
+    color:{color:Links header text};
+    border:solid 1px {color:Links header border};
+    padding:10px 0px 10px 0px;
+    font-family:{font:Title font};
+    font-size:12px;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:6px;
+}
+#linkbox {
+    width:230px;
+    padding:0px 20px 0px 15px;
+}
+#linkboxlink {
+    float:left;
+    width:90px;
+    font-size:10px;
+    color:{color:Links tab link};
+    margin:3px 5px 2px 5px;
+    padding:5px 5px 5px 5px;
+    text-align:center;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#linkboxlink:hover {color:{color:Links tab link hover};}
+
+#blogrollcont {
+    position:absolute;
+    left:2000px;
+    width:470px;
+    height:260px;
+    padding:20px 15px 20px 15px;
+    background-color:{color:Container background};
+    overflow-y:auto;
+}
+
+.brblog {
+    float:left;
+    margin:5px;
+}
+
+#mainnavcont {
+    position:fixed;
+    top:50%;
+    left:50%;
+    height:20px;
+    width:520px;
+    margin-top:240px;
+    margin-left:-250px;
+}
+
+#mainlink {
+    float:left;
+    width:85px;
+    height:30px;
+    padding:0px 2px 0px 2px;
+    border:solid 2px #F68228;
+    margin-right:11px;
+}
+#mainlink:hover {border:solid 2px #FFF434;}
+.navhome, .navabout, .navmsg, .navlinks, .navblogs {
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.navhome {background-image:url('https://static.tumblr.com/o4povtk/y0Knxid6w/ni1.png');}
+.navabout {background-image:url('https://static.tumblr.com/o4povtk/HS2nyj8j8/about.png');}
+.navmsg {background-image:url('https://static.tumblr.com/o4povtk/qmPo2g3gs/msg.png');}
+.navlinks {background-image:url('https://static.tumblr.com/o4povtk/Tmhnyjcev/links.png');}
+.navblogs {background-image:url('https://static.tumblr.com/o4povtk/nsynyjcat/blogs.png');}
+
+.navhome:hover {background-image:url('https://static.tumblr.com/o4povtk/mignxid7i/ni1h.png');}
+.navabout:hover {background-image:url('https://static.tumblr.com/o4povtk/7TNnyjcq3/abouth.png');}
+.navmsg:hover {background-image:url('https://static.tumblr.com/o4povtk/CULo2g3jp/msgh.png');}
+.navlinks:hover {background-image:url('https://static.tumblr.com/o4povtk/Rolnyjdqe/linksh.png');}
+.navblogs:hover {background-image:url('https://static.tumblr.com/o4povtk/mjOnyjdwr/blogsh.png');}
+
+{CustomCSS}
+</style>
+<script>
+    $(document).tooltip({
+    track: true,
+    tooltipClass: "tooltiptheme",
+    items: ".tooltip"
+});
+</script>
+</head>
+<body>
+    <div style="display:none;"><img src="https://static.tumblr.com/o4povtk/mignxid7i/ni1h.png"><img src="https://static.tumblr.com/o4povtk/7TNnyjcq3/abouth.png"><img src="https://static.tumblr.com/o4povtk/CULo2g3jp/msgh.png"><img src="https://static.tumblr.com/o4povtk/Rolnyjdqe/linksh.png"><img src="https://static.tumblr.com/o4povtk/mjOnyjdwr/blogsh.png"></div>
+    <div id="characterimage"></div>
+    <div id="maincont">
+        <div id="postcont">
+            <ol id="posts">
+            <div class="autopagerize_page_element">
+            {block:Posts}
+            <li class="post">
+            {block:Date}<table style="width:400px; {block:If250pxPosts}width:250px;{/block:If250pxPosts}"><tr><td><a href="{Permalink}" style="color:{color:Post info};">{ShortMonth} {DayOfMonth}, {ShortYear}</a></td><td style="text-align:right;"><a href="{Permalink}" style="color:{color:Post info};">{NoteCountWithLabel}</a></td></tr></table>{/block:Date}
+            {block:Text}
+            <div class="text">
+            {block:Title}
+            <h3><a href="{Permalink}" class="posttitle">{Title}</a></h3><br>
+            {/block:Title}{Body}
+            {/block:Text}
+ 
+            {block:Photo}
+            <div class="photo">
+            {block:HighRes}<a href="{PhotoURL-HighRes}" target="_blank">{/block:HighRes}<img src="{block:IfNot250pxPosts}{PhotoURL-400}{/block:IfNot250pxPosts}{block:If250pxPosts}{PhotoURL-250}{/block:If250pxPosts}" alt="{PhotoAlt}"/>{block:HighRes}</a>{/block:HighRes}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            {/block:Photo}
+ 
+            {block:Photoset}
+            <div class="photoset">
+            {block:IfNot250pxPosts}{Photoset-400}{/block:IfNot250pxPosts}{block:If250pxPosts}{Photoset-250}{/block:If250pxPosts}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            {/block:Photoset}
+ 
+            {block:Quote}
+            <div class="quote">
+            <br>
+            {Quote}
+            {block:Source}
+            <h3><div class="source">— {Source}</div></h3>
+            {/block:Source}
+            {/block:Quote}
+ 
+            {block:Link}
+            <div class="link">
+            <h3><a href="{URL}" {Target}>{Name}</a></h3>
+            {block:Description}
+            <br><div class="description">{Description}</div>
+            {/block:Description}
+            {/block:Link}
+           
+           
+            {block:Chat}
+            <div class="chat">
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3><br>
+            {/block:Title}
+            <br>
+            {block:Lines}
+            {block:Label}<b>{Label}</b>{/block:Label}
+            {Line}<br>
+            {/block:Lines}
+            {/block:Chat}
+ 
+            {block:Answer}
+            <div class="ask">
+            <br>
+            <img class="askerportrait" src="{AskerPortraitURL-64}">
+            <div style="color:{color:Asker name};">
+            <div class="a">
+            <b>{Asker} asks</b>: <div class="question">* {Question}</div>
+            </div>
+            </div><br>
+            <div class="answer">{Answer}</div>
+            {/block:Answer}
+ 
+            {block:Video}
+            <div class="video">
+            {block:IfNot250pxPosts}{Video-400}{/block:IfNot250pxPosts}{block:If250pxPosts}{Video-250}{/block:If250pxPosts}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            {/block:Video}
+ 
+            {block:Audio}
+            <div class="audio">
+            {block:AlbumArt}<div style="float:left;"><img src="{AlbumArtURL}" width="150" height="150"></div>{/block:AlbumArt}
+            <div style="position:relative; left:10px; top:5px">
+    {block:trackname}<div class="aline"><b>track name:</b> {trackname}</div>{/block:trackname}
+            {block:artist}<div class="aline"><br><b>artist:</b> {artist}</div>{/block:artist}
+            {block:album}<div class="aline"><br><b>album:</b> {album}</div>{/block:album}
+            {block:playcount}<div class="aline"><br><b>play count:</b> {playcount}</div>{/block:playcount}
+            </div>
+            <div style="clear:both;"></div>
+            {block:AudioPlayer}{AudioPlayerBlack}{/block:AudioPlayer}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            {/block:Audio}
+           
+           
+            {block:Date}<table style="width:400px; {block:If250pxPosts}width:250px;{/block:If250pxPosts} color:{color:Post info};"><tr><td style="width:325px; {block:If250pxPosts}width:195px;{/block:If250pxPosts}">{block:IfAlwaysShowTags}{block:HasTags}Tags: {block:Tags}<span class="tags"><a href="{TagURL}">#{Tag}</a></span>{/block:Tags}{/block:HasTags}{/block:IfAlwaysShowTags}{block:IfNotAlwaysShowTags}{block:PermalinkPage}{block:HasTags}Tags: {block:Tags}<span class="tags"><a href="{TagURL}">#{Tag} </a></span>{/block:Tags}{/block:HasTags}{/block:PermalinkPage}{/block:IfNotAlwaysShowTags}</td><td>{LikeButton size="16"}</td><td>{ReblogButton size="16"}</td></tr></table>{/block:Date}
+           
+            </div></li>
+            {block:PostNotes}<div class="pagenotes">{PostNotes}</div>{/block:PostNotes}
+            {/block:Posts}
+            </ol>
+            {block:Pagination}{block:PreviousPage}<a href="{PreviousPage}"><div class="pagprev"><</div></a>{/block:PreviousPage}<a href="/"><div class="pagindex">index</div></a>{block:NextPage}<a href="{NextPage}"><div class="pagnext">></div></a>{/block:NextPage}{/block:Pagination}
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--    Stuff to edit starts here!!    -->
+        
+        
+        
+        
+        
+        
+        
+        <!--
+        |
+        | Here is the about tab!
+        | Fill in whatever you like below
+        | Put paragraphs between <p> and </p>
+        | Use <br> for a line break
+        |
+        -->
+        <div id="aboutcont">
+            <h3>* Put a title here or delete this line</h3>
+            
+            <p>You can talk about yourself here. Think of what Mettaton might say about himself and use that as a guideline. c:</p>
+            
+            <p><b>Bold</b> <i>Italic</i> <u>Underline</u> <s>Strikethrough</s><br>On a new line</p>
+            
+            <p>An re ponitur veritas halitus du etiamsi quinque quatuor me. Seipso necdum de bitavi at ad. Errem rei solus tur debet nempe. At to ut ut superest callidum quidquam. Fallebar superest gi aliosque ii. Materiam ob momentum existens de immorari.</p>
+
+            <p>Ullo fore suo imo novo fas quid meam fit. Ab quovis tribuo certis is juvare posset fuerim. Vi mentes at inquam ha mutata reipsa quanta in. Curant colore ea contra et deesse. Ii materia degenda to sentire si in diutius fructum ultimum. Formaliter indefinite potentiali at in ex occurrebat catholicae id expectabam. Opiniones at credibile ad in omniscium.</p>
+
+            <p>Ha et diligenter devenietur perspicuae indefinite de at scripturis. Otium rem pauca nobis fit quies. Utcunque ut ha universo falsitas et odoratum. Et eo naturalis remotiora ei re recurrunt distincte objectiva eversioni. Hauriantur si expergisci mutationum praemissae re at mo. Usu admovetur ego mem aggredior mentemque potestque.</p>
+            
+        
+        <!--    END ABOUT TAB    -->
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!--
+        |
+        | Here is the FAQ tab!
+        | Follow the template and add as many questions as you like.
+        | IMPORTANT! Make sure you fill in your URL towards the end!
+        |
+        -->
+        <div id="msgcont">
+            <div id="faqheader">* Who is your favourite Undertale character?</div>
+            <div id="faqanswer">
+                <p>They're all so cute! I can't help but pick just one *cough*ilovesans*cough* But seriously they're all so great!</p>
+            </div>
+            
+            <div id="faqheader">* Question goes here</div>
+            <div id="faqanswer">
+                <p>Answer here.</p>
+            </div>
+            
+            <div id="faqheader">* Question goes here</div>
+            <div id="faqanswer">
+                <p>Answer here.</p>
+            </div>
+            
+        <!-- END FAQ TAB  -->
+            
+            <iframe frameborder="0" height="190" id="ask_form" scrolling="no" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com" width="100%" style="background-color: transparent; overflow: hidden;"></iframe>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!--
+        |
+        | This is the blogroll tab!
+        | You actually don't have to do anything here yaay
+        |
+        -->
+        <div id="blogrollcont">
+            <h3>Blogroll</h3><br>{block:Following}{block:Followed}<a href="{FollowedURL}" target="_blank"><div class="brblog tooltip" title="{FollowedName}"><img src="{FollowedPortraitURL-48}"></div></a>{/block:Followed}{/block:Following}
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--
+        |
+        | This is the links tab!
+        |
+        | Follow the templates and add in the URL you want to link to
+        |  and the name of the link
+        | I added a couple examples for tags on your blog and another for
+        |  links on other websites, follow those
+        | There's also templates on the bottom you can use!
+        | Add as many links as you like
+        |
+        | This is a bit tricky so if you're having difficulty then make
+        |  sure to follow the customization guide if you're not sure!
+        |
+        -->
+        <div id="linklistcont">
+        
+        
+        
+            <div id="linklistheader">Tags</div>
+            <div id="linkbox">
+                <a href="/tagged/undertale"><div id="linkboxlink">Undertale</div></a>
+                <a href="/tagged/frisk"><div id="linkboxlink">Frisk</div></a>
+                <a href="/tagged/papyrus"><div id="linkboxlink">Papyrus</div></a>
+                <a href="/tagged/sans"><div id="linkboxlink">Sans</div></a>
+                <a href="/tagged/napstablook"><div id="linkboxlink">Napstablook</div></a>
+                <a href="/tagged/mettaton"><div id="linkboxlink">Mettaton</div></a>
+            </div><div style="clear:both; height:20px;"></div>
+            
+            
+            
+            <div id="linklistheader">Some links outta here</div>
+            <div id="linkbox">
+                <a href="https://undertale.com/"><div id="linkboxlink">Check out Undertale</div></a>
+                <a href="https://raiidens.tumblr.com/tagged/themesbyraiidens"><div id="linkboxlink">More  super cool themes</div></a>
+            </div><div style="clear:both; height:20px;"></div>
+            
+            
+            
+            <div id="linklistheader">Header Title</div>
+            <div id="linkbox">
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+            </div><div style="clear:both; height:20px;"></div>
+            
+            
+            
+            <div id="linklistheader">Header Title</div>
+            <div id="linkbox">
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+                <a href="URL HERE"><div id="linkboxlink">Link name</div></a>
+            </div><div style="clear:both; height:20px;"></div>
+            
+            
+    <!--  END LINKS TAB  -->
+        </div>
+    </div><div style="clear:both;"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- nothing else to change! c: -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    <div id="gameinfo">
+        <table style="width:300px;"><tr><td>{text:Your name}</td><td>LV {text:LV}</td><td width="20px;"></td><td><img src="https://static.tumblr.com/o4povtk/npDnwf8bm/1__0_00_00_00_.png" width="53px" height="20px"> {text:HP} / {text:HP}</td></tr></table>
+    </div>
+    <div id="mainnavcont">
+        <a href="javaScript:void(0);" id="linktohome"><div id="mainlink" class="navhome"></div></a>
+        <a href="javaScript:void(0);"><div id="mainlink" class="navabout"></div></a>
+        <a href="javaScript:void(0);"><div id="mainlink" class="navmsg"></div></a>
+        <a href="javaScript:void(0);"><div id="mainlink" class="navlinks"></div></a>
+        <a href="javaScript:void(0);"><div id="mainlink" class="navblogs"></div></a>
+    </div>
+    <a href="https://raiidens.tumblr.com/tagged/themesbyraiidens"><div id="credit" class="tooltip" title="by raiidens">theme</div></a>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        if (window.location.pathname != '/') {
+            $("#linktohome").attr('href', '/');
+        }
+        
+        $(".navhome").click(function() {
+           $("#postcont").animate({"left":"0px"}, 1000);
+           $("#aboutcont").animate({"left":"500px"}, 1000);
+            $("#msgcont").animate({"left":"1000px"}, 1000);
+            $("#linklistcont").animate({"left":"1500px"}, 1000);
+            $("#blogrollcont").animate({"left":"2000px"}, 1000);
+        });
+        $(".navabout").click(function() {
+            $("#postcont").animate({"left":"-500px"}, 1000);
+            $("#aboutcont").animate({"left":"0px"}, 1000);
+            $("#msgcont").animate({"left":"500px"}, 1000);
+            $("#linklistcont").animate({"left":"1000px"}, 1000);
+            $("#blogrollcont").animate({"left":"1500px"}, 1000);
+        });
+        $(".navmsg").click(function() {
+            $("#postcont").animate({"left":"-1000px"}, 1000);
+            $("#aboutcont").animate({"left":"-500px"}, 1000);
+            $("#msgcont").animate({"left":"0px"}, 1000);
+            $("#linklistcont").animate({"left":"500px"}, 1000);
+            $("#blogrollcont").animate({"left":"1000px"}, 1000);
+        });
+        $(".navlinks").click(function() {
+            $("#postcont").animate({"left":"-1500px"}, 1000);
+            $("#aboutcont").animate({"left":"-1000px"}, 1000);
+            $("#msgcont").animate({"left":"-500px"}, 1000);
+            $("#linklistcont").animate({"left":"0px"}, 1000);
+            $("#blogrollcont").animate({"left":"500px"}, 1000);
+        });
+        $(".navblogs").click(function() {
+            $("#postcont").animate({"left":"-2000px"}, 1000);
+            $("#aboutcont").animate({"left":"-1500px"}, 1000);
+            $("#msgcont").animate({"left":"-1000px"}, 1000);
+            $("#linklistcont").animate({"left":"-500px"}, 1000);
+            $("#blogrollcont").animate({"left":"0px"}, 1000);
+        });
+    });
+    </script>
+</body>
+</html>
